@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Text Table Generator</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="text/javascript" src="script.js"></script>
-</head>
-<body>
-  <div class="container">
-    <h1>Text Table Generator</h1>
-    <form id="table-form" onsubmit="return generateTable()">
-      <label for="table-text">Enter your table text:</label>
-      <textarea id="table-text" name="table-text" rows="10"></textarea>
-      <br>
-      <label for="font-selector">Select a font:</label>
-      <select id="font-selector" name="font-selector">
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Tahoma">Tahoma</option>
-        <option value="Trebuchet MS">Trebuchet MS</option>
-        <option value="Times New Roman">Times New Roman</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Courier New">Courier New</option>
-        <option value="Lucida Console">Lucida Console</option>
-      </select>
-      <br>
-      <label for="bg-color">Select a background color:</label>
-      <input type="color" id="bg-color" name="bg-color" value="#ffffff">
-      <br>
-      <button type="submit" id="preview-btn">Preview</button>
-      <button type="button" onclick="resetForm()">Reset</button>
-    </form>
-    <div id="table-preview"></div>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Text Formatter</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text Formatter</h1>
+      <form>
+        <label for="text-input">Enter Text:</label><br>
+        <textarea id="text-input" name="text-input" rows="10" cols="50" maxlength="500"></textarea><br>
+        <label for="font-family">Select Font:</label>
+        <select id="font-family" name="font-family">
+          <option value="Arial">Arial</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Palatino">Palatino</option>
+          <option value="Garamond">Garamond</option>
+          <option value="Bookman">Bookman</option>
+          <option value="Comic Sans MS">Comic Sans MS</option>
+          <option value="Trebuchet MS">Trebuchet MS</option>
+          <option value="Arial Black">Arial Black</option>
+          <option value="Impact">Impact</option>
+          <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+          <option value="Lucida Console">Lucida Console</option>
+        </select><br>
+        <label for="background-color">Select Background Color:</label>
+        <select id="background-color" name="background-color">
+          <option value="white">White</option>
+          <option value="lightgray">Light Gray</option>
+          <option value="silver">Silver</option>
+          <option value="gray">Gray</option>
+          <option value="darkgray">Dark Gray</option>
+          <option value="black">Black</option>
+          <option value="red">Red</option>
+          <option value="orange">Orange</option>
+          <option value="yellow">Yellow</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="purple">Purple</option>
+        </select><br>
+        <button type="button" onclick="preview()">Preview</button>
+      </form>
+      <div id="preview"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
