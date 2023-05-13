@@ -1,55 +1,35 @@
-/* styles for the input and preview areas */
-.input-area {
-  width: 100%;
-  margin-bottom: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.preview-area {
-  width: 100%;
-  border: 1px solid black;
-  padding: 10px;
-  font-family: "Open Sans", sans-serif;
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-/* styles for the dropdown menus */
-select {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  margin-right: 10px;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-/* styles for the submit and reset buttons */
-button {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  margin-right: 10px;
-  cursor: pointer;
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-button:hover {
-  background-color: #0069d9;
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
-/* styles for the font color picker */
-#font-color-picker {
-  margin-right: 10px;
+.header p {
+  font-size: 1.5rem;
+  color: #666;
 }
 
-/* styles for the font size picker */
-#font-size-picker {
-  margin-right: 10px;
-}
-
-/* styles for the table color picker */
-#table-color-picker {
-  margin-right: 10px;
-}
-
-/* styles for the file input */
-.file-input {
-  margin-right: 10px;
-}
+.options {
+ 
