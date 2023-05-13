@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>ServiTraitor</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
+  <meta charset="utf-8">
+  <title>HTML Preview Tool</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
 </head>
-
 <body>
-	<div class="container">
-		<h1>ServiTraitor</h1>
-		<form id="form">
-			<label for="font">Text Font:</label>
-			<select name="font" id="font">
-				<option value="Arial">Arial</option>
-				<option value="Verdana">Verdana</option>
-				<option value="Helvetica">Helvetica</option>
-				<option value="Times New Roman">Times New Roman</option>
-				<option value="Courier New">Courier New</option>
-				<option value="Georgia">Georgia</option>
-				<option value="Comic Sans MS">Comic Sans MS</option>
-				<option value="Tahoma">Tahoma</option>
-				<option value="Palatino Linotype">Palatino Linotype</option>
-				<option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
-				<option value="Lucida Console">Lucida Console</option>
-			</select>
-			<label for="table-color">Table Background Color:</label>
-			<input type="color" name="table-color" id="table-color" value="#ffffff">
-			<br>
-			<input type="file" id="html-file" name="html-file"><br><br>
-			<button type="button" id="preview-btn" onclick="preview()">Preview</button>
-			<button type="button" id="clear-btn" onclick="clearForm()">Clear</button>
-		</form>
-		<div id="preview">
-			<p>Preview:</p>
-			<div id="preview-table"></div>
-		</div>
-	</div>
+  <div class="container">
+    <h1>HTML Preview Tool</h1>
+    <form onsubmit="return false">
+      <div class="form-row">
+        <label for="html-input">HTML Input:</label>
+        <textarea id="html-input" name="html-input" rows="10" cols="50"></textarea>
+      </div>
+      <div class="form-row">
+        <label for="font-family">Font Family:</label>
+        <select id="font-family" name="font-family">
+          <option value="Arial">Arial</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Comic Sans MS">Comic Sans MS</option>
+          <option value="Impact">Impact</option>
+          <option value="Lucida Console">Lucida Console</option>
+        </select>
+        <label for="font-color">Font Color:</label>
+        <input type="color" id="font-color" name="font-color" value="#000000">
+      </div>
+      <div class="form-row">
+        <label for="table-color">Table Background Color:</label>
+        <input type="color" id="table-color" name="table-color" value="#FFFFFF">
+      </div>
+      <div class="form-row">
+        <button id="preview-button" type="button" onclick="previewHtml()">Preview</button>
+        <button id="clear-button" type="button" onclick="clearForm()">Clear</button>
+      </div>
+    </form>
+    <div id="preview-container">
+      <h2>Preview:</h2>
+      <iframe id="preview-iframe"></iframe>
+    </div>
+  </div>
 </body>
 </html>
