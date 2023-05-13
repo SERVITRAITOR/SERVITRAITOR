@@ -1,53 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Text Formatter</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1>Text Formatter</h1>
-      <form>
-        <label for="text-input">Enter Text:</label><br>
-        <textarea id="text-input" name="text-input" rows="10" cols="50" maxlength="500"></textarea><br>
-        <label for="font-family">Select Font:</label>
-        <select id="font-family" name="font-family">
-          <option value="Arial">Arial</option>
-          <option value="Helvetica">Helvetica</option>
-          <option value="Times New Roman">Times New Roman</option>
-          <option value="Courier New">Courier New</option>
-          <option value="Verdana">Verdana</option>
-          <option value="Georgia">Georgia</option>
-          <option value="Palatino">Palatino</option>
-          <option value="Garamond">Garamond</option>
-          <option value="Bookman">Bookman</option>
-          <option value="Comic Sans MS">Comic Sans MS</option>
-          <option value="Trebuchet MS">Trebuchet MS</option>
-          <option value="Arial Black">Arial Black</option>
-          <option value="Impact">Impact</option>
-          <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
-          <option value="Lucida Console">Lucida Console</option>
-        </select><br>
-        <label for="background-color">Select Background Color:</label>
-        <select id="background-color" name="background-color">
-          <option value="white">White</option>
-          <option value="lightgray">Light Gray</option>
-          <option value="silver">Silver</option>
-          <option value="gray">Gray</option>
-          <option value="darkgray">Dark Gray</option>
-          <option value="black">Black</option>
-          <option value="red">Red</option>
-          <option value="orange">Orange</option>
-          <option value="yellow">Yellow</option>
-          <option value="green">Green</option>
-          <option value="blue">Blue</option>
-          <option value="purple">Purple</option>
-        </select><br>
-        <button type="button" onclick="preview()">Preview</button>
-      </form>
-      <div id="preview"></div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<title>ServiTraitor</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>ServiTraitor</h1>
+		<form id="form">
+			<label for="font">Text Font:</label>
+			<select name="font" id="font">
+				<option value="Arial">Arial</option>
+				<option value="Verdana">Verdana</option>
+				<option value="Helvetica">Helvetica</option>
+				<option value="Times New Roman">Times New Roman</option>
+				<option value="Courier New">Courier New</option>
+				<option value="Georgia">Georgia</option>
+				<option value="Comic Sans MS">Comic Sans MS</option>
+				<option value="Tahoma">Tahoma</option>
+				<option value="Palatino Linotype">Palatino Linotype</option>
+				<option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+				<option value="Lucida Console">Lucida Console</option>
+			</select>
+			<label for="table-color">Table Background Color:</label>
+			<input type="color" name="table-color" id="table-color" value="#ffffff">
+			<br>
+			<input type="file" id="html-file" name="html-file"><br><br>
+			<button type="button" id="preview-btn" onclick="preview()">Preview</button>
+			<button type="button" id="clear-btn" onclick="clearForm()">Clear</button>
+		</form>
+		<div id="preview">
+			<p>Preview:</p>
+			<div id="preview-table"></div>
+		</div>
+	</div>
+</body>
 </html>
