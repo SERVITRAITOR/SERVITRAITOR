@@ -6,20 +6,24 @@
   </head>
   <body>
     <div class="container">
-      <input type="text" id="html-input" placeholder="Paste HTML code here...">
-      <button id="preview-button">Preview</button>
+      <form id="form">
+        <textarea id="input" placeholder="Paste HTML code here..."></textarea>
+        <div class="options">
+          <label for="font-select">Font:</label>
+          <select id="font-select">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+          </select>
+          <label for="bg-color-picker">Table Background Color:</label>
+          <input type="color" id="bg-color-picker" value="#ffffff">
+          <button type="submit" id="preview-btn">Preview</button>
+        </div>
+      </form>
+      <iframe id="preview"></iframe>
     </div>
-    <div id="preview"></div>
-    <script>
-      const previewButton = document.getElementById("preview-button");
-      const htmlInput = document.getElementById("html-input");
-      const preview = document.getElementById("preview");
 
-      previewButton.addEventListener("click", function() {
-        preview.innerHTML = htmlInput.value;
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
-
 
