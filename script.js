@@ -1,8 +1,21 @@
 function preview() {
-  var text = document.getElementById("text-input").value;
-  var fontFamily = document.getElementById("font-family").value;
-  var backgroundColor = document.getElementById("background-color").value;
-  var preview = document.getElementById("preview");
-  preview.style.fontFamily = fontFamily;
-  preview.style.backgroundColor = backgroundColor;
-  preview.innerHTML = text
+    var font = document.getElementById("font").value;
+    var tableColor = document.getElementById("table-color").value;
+    var previewTable = document.getElementById("preview-table");
+    var fileInput = document.getElementById('html-file');
+    
+    var file = fileInput.files[0];
+    var reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function() {
+        var previewText = reader.result;
+        previewTable.innerHTML = previewText;
+        previewTable.style.fontFamily = font;
+        previewTable.style.backgroundColor = tableColor;
+    }
+}
+
+function clearForm() {
+    document.getElementById("form").reset();
+    document.getElementById("preview-table").innerHTML = "";
+}
