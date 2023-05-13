@@ -4,52 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document Generator</title>
+    <title>PDF Generator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <h1>Document Generator</h1>
-        <p>Create PDF documents from HTML templates</p>
-      </div>
-      <div class="options">
-        <div class="option">
-          <label for="template">Select Template:</label>
-          <select id="template">
-            <option value="">Choose a template</option>
-            <option value="template1.html">Template 1</option>
-            <option value="template2.html">Template 2</option>
-            <option value="template3.html">Template 3</option>
+      <h1>PDF Generator</h1>
+      <form>
+        <div class="form-group">
+          <label for="pdf-title">Title:</label>
+          <input type="text" id="pdf-title" />
+        </div>
+        <div class="form-group">
+          <label for="pdf-text">Text:</label>
+          <textarea id="pdf-text"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="pdf-font">Font:</label>
+          <select id="pdf-font">
+            <option value="Helvetica">Helvetica</option>
+            <option value="Times">Times</option>
+            <option value="Courier">Courier</option>
+            <option value="Roboto">Roboto</option>
+            <option value="Open Sans">Open Sans</option>
           </select>
         </div>
-        <div class="option">
-          <label for="font">Select Font:</label>
-          <select id="font">
-            <option value="Arial">Arial</option>
-            <option value="Times New Roman">Times New Roman</option>
-            <option value="Verdana">Verdana</option>
-            <option value="Courier New">Courier New</option>
-          </select>
-        </div>
-        <div class="option">
-          <label for="font-size">Select Font Size:</label>
-          <select id="font-size">
+        <div class="form-group">
+          <label for="pdf-font-size">Font Size:</label>
+          <select id="pdf-font-size">
+            <option value="10">10</option>
             <option value="12">12</option>
             <option value="14">14</option>
             <option value="16">16</option>
             <option value="18">18</option>
           </select>
         </div>
-        <div class="option">
-          <label for="text-color">Select Text Color:</label>
-          <input type="color" id="text-color" value="#000000" />
+        <div class="form-group">
+          <label for="pdf-font-color">Font Color:</label>
+          <input type="color" id="pdf-font-color" value="#000000" />
         </div>
-        <div class="option">
-          <label for="table-color">Select Table Color:</label>
-          <input type="color" id="table-color" value="#FFFFFF" />
+        <div class="form-group">
+          <label for="pdf-table-color">Table Color:</label>
+          <input type="color" id="pdf-table-color" value="#ffffff" />
         </div>
-        <div class="option">
+        <button type="button" id="pdf-preview">Preview</button>
+        <button type="button" id="pdf-download">Download PDF</button>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
           <button id="preview-btn">Preview</button>
         </div>
       </div>
