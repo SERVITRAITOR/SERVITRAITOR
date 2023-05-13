@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Battlescribe HTML Editor</title>
-    <link rel="stylesheet" href="style.css">
+    <title>HTML Input Box Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="container">
-      <h1>Battlescribe HTML Editor</h1>
-      <p>Paste your HTML code below:</p>
-      <textarea id="html-input" placeholder="Paste HTML code here..."></textarea>
-      <p>Preview:</p>
-      <iframe id="preview" sandbox="allow-scripts"></iframe>
+      <form onsubmit="return false;">
+        <input type="text" id="html-input" placeholder="Paste HTML code here...">
+        <button type="submit" onclick="displayPreview()">Submit</button>
+      </form>
     </div>
-
-    <script src="app.js"></script>
+    <div id="preview-container"></div>
+    <script src="index.js"></script>
   </body>
 </html>
