@@ -2,29 +2,32 @@
 <html>
   <head>
     <title>HTML Input Box Example</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <form id="form">
-        <textarea id="input" placeholder="Paste HTML code here..."></textarea>
-        <div class="options">
-          <label for="font-select">Font:</label>
-          <select id="font-select">
-            <option value="Arial">Arial</option>
-            <option value="Times New Roman">Times New Roman</option>
-            <option value="Verdana">Verdana</option>
-          </select>
-          <label for="bg-color-picker">Table Background Color:</label>
-          <input type="color" id="bg-color-picker" value="#ffffff">
-          <button type="submit" id="preview-btn">Preview</button>
-        </div>
+      <h2>HTML Input Box Example</h2>
+      <form>
+        <label for="html-code">Paste HTML code here:</label>
+        <textarea id="html-code" name="html-code" placeholder="Paste HTML code here..."></textarea>
+        <br><br>
+        <label for="font-family">Font Family:</label>
+        <select id="font-family" name="font-family">
+          <option value="Arial, sans-serif">Arial</option>
+          <option value="Helvetica, sans-serif">Helvetica</option>
+          <option value="Times New Roman, serif">Times New Roman</option>
+        </select>
+        <br><br>
+        <label for="bg-color">Table Background Color:</label>
+        <input type="color" id="bg-color" name="bg-color" value="#ffffff">
+        <br><br>
+        <button type="button" onclick="previewHTML()">Preview</button>
+        <button type="reset">Reset</button>
       </form>
-      <iframe id="preview"></iframe>
+      <hr>
+      <h2>Preview:</h2>
+      <div id="preview"></div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
-
