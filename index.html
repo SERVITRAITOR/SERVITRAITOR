@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>HTML Input Box Example</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <h2>HTML Input Box Example</h2>
-      <form>
-        <label for="html-code">Paste HTML code here:</label>
-        <textarea id="html-code" name="html-code" placeholder="Paste HTML code here..."></textarea>
-        <br><br>
-        <label for="font-family">Font Family:</label>
-        <select id="font-family" name="font-family">
-          <option value="Arial, sans-serif">Arial</option>
-          <option value="Helvetica, sans-serif">Helvetica</option>
-          <option value="Times New Roman, serif">Times New Roman</option>
-        </select>
-        <br><br>
-        <label for="bg-color">Table Background Color:</label>
-        <input type="color" id="bg-color" name="bg-color" value="#ffffff">
-        <br><br>
-        <button type="button" onclick="previewHTML()">Preview</button>
-        <button type="reset">Reset</button>
-      </form>
-      <hr>
-      <h2>Preview:</h2>
-      <div id="preview"></div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<head>
+  <title>Text Table Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Text Table Generator</h1>
+    <form id="table-form" onsubmit="return generateTable()">
+      <label for="table-text">Enter your table text:</label>
+      <textarea id="table-text" name="table-text" rows="10"></textarea>
+      <br>
+      <label for="font-selector">Select a font:</label>
+      <select id="font-selector" name="font-selector">
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Lucida Console">Lucida Console</option>
+      </select>
+      <br>
+      <label for="bg-color">Select a background color:</label>
+      <input type="color" id="bg-color" name="bg-color" value="#ffffff">
+      <br>
+      <button type="submit" id="preview-btn">Preview</button>
+      <button type="button" onclick="resetForm()">Reset</button>
+    </form>
+    <div id="table-preview"></div>
+  </div>
+</body>
 </html>
