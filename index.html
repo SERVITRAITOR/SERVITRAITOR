@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML Input Box Example</title>
-    <style>
-      .container input[type=text] {
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-      }
-      textarea {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-    </style>
+    <title>Battlescribe HTML Editor</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <input type="text" placeholder="Paste whatever HTML code here...">
+      <h1>Battlescribe HTML Editor</h1>
+      <p>Paste your HTML code below:</p>
+      <textarea id="html-input" placeholder="Paste HTML code here..."></textarea>
+      <p>Preview:</p>
+      <iframe id="preview" sandbox="allow-scripts"></iframe>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
