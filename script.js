@@ -1,3 +1,4 @@
+document.getElementById("preview-btn").addEventListener("click", preview);
 const previewButton = document.getElementById("preview-button");
 const htmlInput = document.getElementById("html-input");
 const previewDiv = document.getElementById("preview-div");
