@@ -1,9 +1,8 @@
-function previewHTML() {
-  var htmlCode = document.getElementById("html-code").value;
+function preview() {
+  var text = document.getElementById("text-input").value;
   var fontFamily = document.getElementById("font-family").value;
-  var bgColor = document.getElementById("bg-color").value;
-  
-  document.getElementById("preview").innerHTML = htmlCode;
-  document.getElementById("preview").style.fontFamily = fontFamily;
-  document.getElementById("preview").style.backgroundColor = bgColor;
-}
+  var backgroundColor = document.getElementById("background-color").value;
+  var preview = document.getElementById("preview");
+  preview.style.fontFamily = fontFamily;
+  preview.style.backgroundColor = backgroundColor;
+  preview.innerHTML = text
