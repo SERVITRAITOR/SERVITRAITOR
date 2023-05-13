@@ -1,48 +1,63 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>HTML Preview Tool</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script type="text/javascript" src="script.js"></script>
-</head>
-<body>
-  <div class="container">
-    <h1>HTML Preview Tool</h1>
-    <form onsubmit="return false">
-      <div class="form-row">
-        <label for="html-input">HTML Input:</label>
-        <textarea id="html-input" name="html-input" rows="10" cols="50"></textarea>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Document Generator</h1>
+        <p>Create PDF documents from HTML templates</p>
       </div>
-      <div class="form-row">
-        <label for="font-family">Font Family:</label>
-        <select id="font-family" name="font-family">
-          <option value="Arial">Arial</option>
-          <option value="Helvetica">Helvetica</option>
-          <option value="Times New Roman">Times New Roman</option>
-          <option value="Courier New">Courier New</option>
-          <option value="Verdana">Verdana</option>
-          <option value="Georgia">Georgia</option>
-          <option value="Comic Sans MS">Comic Sans MS</option>
-          <option value="Impact">Impact</option>
-          <option value="Lucida Console">Lucida Console</option>
-        </select>
-        <label for="font-color">Font Color:</label>
-        <input type="color" id="font-color" name="font-color" value="#000000">
+      <div class="options">
+        <div class="option">
+          <label for="template">Select Template:</label>
+          <select id="template">
+            <option value="">Choose a template</option>
+            <option value="template1.html">Template 1</option>
+            <option value="template2.html">Template 2</option>
+            <option value="template3.html">Template 3</option>
+          </select>
+        </div>
+        <div class="option">
+          <label for="font">Select Font:</label>
+          <select id="font">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Courier New">Courier New</option>
+          </select>
+        </div>
+        <div class="option">
+          <label for="font-size">Select Font Size:</label>
+          <select id="font-size">
+            <option value="12">12</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+          </select>
+        </div>
+        <div class="option">
+          <label for="text-color">Select Text Color:</label>
+          <input type="color" id="text-color" value="#000000" />
+        </div>
+        <div class="option">
+          <label for="table-color">Select Table Color:</label>
+          <input type="color" id="table-color" value="#FFFFFF" />
+        </div>
+        <div class="option">
+          <button id="preview-btn">Preview</button>
+        </div>
       </div>
-      <div class="form-row">
-        <label for="table-color">Table Background Color:</label>
-        <input type="color" id="table-color" name="table-color" value="#FFFFFF">
+      <div class="preview">
+        <h2>Preview</h2>
+        <iframe id="preview-iframe"></iframe>
       </div>
-      <div class="form-row">
-        <button id="preview-button" type="button" onclick="previewHtml()">Preview</button>
-        <button id="clear-button" type="button" onclick="clearForm()">Clear</button>
-      </div>
-    </form>
-    <div id="preview-container">
-      <h2>Preview:</h2>
-      <iframe id="preview-iframe"></iframe>
     </div>
-  </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
